@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USA Couriers | Track Your Package</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004B87;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+
+    .container {
+      max-width: 450px;
+      background: #fff;
+      margin: 70px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #004B87;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #004B87;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005ea6;
+    }
+
+    .error {
+      color: red;
+      margin-top: 15px;
+      display: none;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>USA <span style="color: orange;">COURIERS</span></header>
+
+  <div class="container">
+    <h2>Track Your Package</h2>
+    <form id="trackForm">
+      <input type="text" id="trackingNumber" placeholder="Enter your tracking number" required>
+      <button type="submit">Track</button>
+      <div class="error" id="errorMsg">Invalid tracking number. Please check and try again.</div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("trackForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // ✅ Replace this with your official tracking number
+      const validTrackingNumber = "9102805213683062327846";
+
+      const userInput = document.getElementById("trackingNumber").value.trim();
+
+      if (userInput === validTrackingNumber) {
+        // Redirect to your real tracking details page
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("errorMsg").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>
+</body>
+</html>
