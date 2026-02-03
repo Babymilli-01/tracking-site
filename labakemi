@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Something Honest</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1a1a2e, #16213e, #0f3460);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .card {
+      max-width: 720px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      border-radius: 24px;
+      padding: 45px;
+      text-align: center;
+      animation: fadeIn 1.3s ease;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      color: #f7b2c4;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 22px;
+      opacity: 0.95;
+    }
+
+    .image-box {
+      display: flex;
+      justify-content: center;
+      margin: 28px 0;
+    }
+
+    .image-box img {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(247,178,196,0.6);
+      box-shadow: 0 0 35px rgba(247,178,196,0.45);
+      animation: glow 3s infinite;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 25px rgba(247,178,196,0.3); }
+      50% { box-shadow: 0 0 45px rgba(247,178,196,0.6); }
+      100% { box-shadow: 0 0 25px rgba(247,178,196,0.3); }
+    }
+
+    .question {
+      font-size: 1.5rem;
+      margin: 30px 0 18px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 13px 26px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .yes {
+      background: linear-gradient(135deg, #f7b2c4, #ffd6e0);
+      color: #000;
+      font-weight: 600;
+    }
+
+    .yes:hover {
+      transform: translateY(-2px);
+    }
+
+    .think {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .think:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .note {
+      margin-top: 22px;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Hi <span class="name">Labakeami</span> 💗</h1>
+
+    <p>
+I wanted to do this thoughtfully, because how we met may be online — but what we’ve shared feels genuine.
+    </p>
+
+    <div class="image-box">
+      <img src="amina.jpg" alt="Amina">
+    </div>
+
+    <p>
+      You’re the kind of woman who thinks about growth, purpose, and the future.
+You inspire me to want more from life and from myself.
+Since we met, I’ve felt encouraged, supported, and pushed toward becoming better — not pressured, just believed in.
+    </p>
+
+    <p>
+      There’s no pressure here.  
+      Just honesty and respect.
+    </p>
+    
+    <p> 
+    We haven’t met in person yet, and I respect that real connection takes time and presence.
+Still, I value what we’re building and I’m excited about the possibility of seeing where it can lead — naturally and at the right pace.
+</p> 
+
+
+    <div class="question">
+      Would you like to be my girlfriend?
+    </div>
+
+    <div class="buttons">
+      <button class="yes" onclick="sendYes()">Yes 💕</button>
+      <button class="think" onclick="sendThink()">I’d like to think about it</button>
+    </div>
+
+    <div class="note">
+      Whatever you choose, thank you for taking the time to read this 🌷
+    </div>
+  </div>
+
+  <script>
+    function sendYes() {
+      const text = encodeURIComponent(
+        "Hey 😊 I saw what you made for me, and yes… I’d love to be your girlfriend 💕"
+      );
+      window.location.href =
+        "https://wa.me/2348061968386?text=" + text;
+    }
+
+    function sendThink() {
+      const text = encodeURIComponent(
+        "Hey 🌸 I saw the website. It was really thoughtful. I’d like some time to think about it."
+      );
+      window.location.href =
+        "https://wa.me/2348071968386?text=" + text;
+    }
+  </script>
+
+</body>
+</html>
+	
